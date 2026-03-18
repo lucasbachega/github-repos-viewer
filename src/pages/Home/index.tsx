@@ -4,8 +4,7 @@ import type { GitHubUser } from "@/types/github";
 import { DeveloperCard } from "./components/DeveloperCard";
 import { SearchBar } from "@/components/SearchBar";
 import { QuickTry } from "./components/QuickTry";
-
-const DEV_USERNAME = "lucasbachega";
+import { DEV_USERNAME } from "@/utils/constants";
 
 export function HomePage() {
   const [devUser, setDevUser] = useState<GitHubUser | null>(null);

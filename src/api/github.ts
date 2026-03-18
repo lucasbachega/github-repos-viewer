@@ -34,9 +34,8 @@ export async function fetchRepo(
   if (!safeOwner || !safeRepo) {
     throw new Error(VALIDATION.USER_OR_REPO_REQUIRED);
   }
-  const fullName = `${safeOwner}/${safeRepo}`;
   const { data } = await githubClient.get<GitHubRepo>(
-    `/repos/${encodeURIComponent(fullName)}`,
+    `/repos/${encodeURIComponent(safeOwner)}/${encodeURIComponent(safeRepo)}`,
   );
   return data;
 }

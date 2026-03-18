@@ -1,6 +1,5 @@
-import { useNavigate } from 'react-router-dom';
-
-const DEFAULT_USERS = ['lucasbachega', 'gaearon', 'sindresorhus'];
+import { useNavigate } from "react-router-dom";
+import { DEFAULT_USERS } from "@/utils/constants";
 
 interface QuickTryProps {
   usernames?: string[];
